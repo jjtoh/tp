@@ -195,4 +195,19 @@ public class Module {
         }
         return classifiedLessons;
     }
+
+    private boolean isForcedToAttend(Lesson lessonToCheck) {
+        ArrayList<Lesson> sameTypeLessons = classifiedLessons.get(lessonToCheck.getLessonType());
+        int sameClassInstances = 0;
+        String currentClassNumber = lessonToCheck.getClassNumber();
+        if (sameTypeLessons.size() == 1) {
+            return true;
+        }
+        for (Lesson lesson : sameTypeLessons) {
+            if (lesson.getClassNumber().equals(currentClassNumber)) {
+                sameClassInstances++;
+            }
+        }
+        return (sameClassInstances >= 2);
+    }
 }
