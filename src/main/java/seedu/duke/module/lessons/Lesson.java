@@ -6,7 +6,6 @@ public class Lesson {
     private String endTime;
     private String lessonType;
     private String classNumber;
-
     public String getDay() {
         return day;
     }
