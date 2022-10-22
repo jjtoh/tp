@@ -6,6 +6,7 @@ public class Lesson {
     private String endTime;
     private String lessonType;
     private String classNumber;
+    private boolean isFixedTiming = false;
     public String getDay() {
         return day;
     }
@@ -24,6 +25,10 @@ public class Lesson {
 
     public String getClassNumber() {
         return classNumber;
+    }
+
+    public void setFixedTiming() {
+        this.isFixedTiming = true;
     }
 
     public Lesson(String day, String startTime, String endTime, String lessonType, String classNumber) {

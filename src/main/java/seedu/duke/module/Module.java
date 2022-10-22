@@ -38,12 +38,21 @@ public class Module {
     }
 
     public Module(String moduleCode, String moduleName, String moduleDescription, List<Lesson> lessons) {
+        this.classifiedLessons = classifyLessons(lessons);
         this.moduleCode = moduleCode;
         this.moduleName = moduleName;
         this.moduleDescription = moduleDescription;
-        this.lessons = lessons;
+        this.lessons = identifyFixedTiming(lessons); //edits each lesson fixedTiming state
         this.attending = matchLessonTypes(lessons);
-        this.classifiedLessons = classifyLessons(lessons);
+    }
+
+    private List<Lesson> identifyFixedTiming(List<Lesson> lessons) {
+        for (Lesson lesson : lessons) {
+            if (isForcedToAttend(lesson)) {
+                lesson.setFixedTiming();
+            }
+        }
+        return lessons;
     }
 
     private List<Lesson> matchLessonTypes(List<Lesson> lessons) {
@@ -61,12 +70,22 @@ public class Module {
         String startTime = "Undetermined";
         String endTime = "Undetermined";
         String lessonType = lesson.getLessonType();
-        String classNumber = lesson.getClassNumber();
+        String classNumber = "Undetermined";
         Lesson tempLesson = new Lesson(day, startTime, endTime, lessonType, classNumber);
         temp.add(tempLesson);
         if (!AttendingManager.attendingExists(tempLesson, moduleCode)) {
             AttendingManager.addAttending(tempLesson, this);
         }
+    }
+
+    private void addFixedToAttendingList(List<Lesson> temp, Lesson lesson) {
+        String day = lesson.getDay();
+        String startTime = lesson.getStartTime();
+        String endTime = lesson.getEndTime();
+        String lessonType = lesson.getLessonType();
+        String classNumber = lesson.getClassNumber();
+        Lesson tempLesson = new Lesson(day, startTime, endTime, lessonType, classNumber);
+        temp.add(tempLesson);
     }
 
     private boolean checkExist(List<Lesson> temp, Lesson lessonToCheck) {
