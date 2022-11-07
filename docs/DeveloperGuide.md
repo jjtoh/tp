@@ -52,6 +52,8 @@ The ***Architecture Diagram*** given above presents the high-level design of the
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 #### 3.2. Timetable Class
 <img src="images/TimetableClass.png"/>
 
@@ -66,6 +68,8 @@ At the start of the program, after the user chooses the semester, only the indic
 - `Module`: Represents a single NUS module, with all required information pertaining to it.
 - `Lesson`: Represents a single lesson of a module. Lessons can be of different `lessonType`, for example, `Lecture` and `Tutorial`.
 ---
+
+<div style="page-break-after: always;"></div>
 
 ### 4. Key Features
 #### 4.1. Adding modules to current timetable
@@ -181,6 +185,7 @@ The ***Activity Diagram*** below is a simplified depiction of the module `Comman
 
 </p></details>
 
+<div style="page-break-after: always;"></div>
 
 ##### 4.4.3 Write day and time headers for timetable
 <img src="images/printTimetable_3.png" width="280" />
@@ -198,7 +203,7 @@ The ***Activity Diagram*** below is a simplified depiction of the module `Comman
 &nbsp;&nbsp;&nbsp;&nbsp; III. Popularize ```clashSlotList``` for each day - to store the merged overlapping intervals in step I. <br>
 &nbsp;&nbsp;&nbsp;&nbsp; IV. Remove un-clashed lesson slots. In the above example, ```[1100,1200]``` is not a clashed interval, which is removed in this step. <br>
 &nbsp;&nbsp;&nbsp;&nbsp; V. Return ```clashSlotList```, now an ```ArrayList``` of clashed intervals. <br>
-</details> 
+</p> </details> 
 
 
 &nbsp;&nbsp; (b) Write ```X``` for the clashed intervals <br>
@@ -329,6 +334,8 @@ The target user profile is as follows:
 #### 5.2. Value proposition
 
 The value proposition of the product lies in its ability to aid the management and planning of a university timetable containing NUS modules.
+
+<div style="page-break-after: always;"></div>
 
 ### 6. User Stories
 
