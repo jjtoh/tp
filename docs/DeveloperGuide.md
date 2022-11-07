@@ -198,7 +198,7 @@ The ***Activity Diagram*** below is a simplified depiction of the module `Comman
 &nbsp;&nbsp;&nbsp;&nbsp; III. Popularize ```clashSlotList``` for each day - to store the merged overlapping intervals in step I. <br>
 &nbsp;&nbsp;&nbsp;&nbsp; IV. Remove un-clashed lesson slots. In the above example, ```[1100,1200]``` is not a clashed interval, which is removed in this step. <br>
 &nbsp;&nbsp;&nbsp;&nbsp; V. Return ```clashSlotList```, now an ```ArrayList``` of clashed intervals. <br>
-</p></details> 
+</details> 
 
 
 &nbsp;&nbsp; (b) Write ```X``` for the clashed intervals <br>
