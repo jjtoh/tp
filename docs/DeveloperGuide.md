@@ -194,7 +194,7 @@ The ***Activity Diagram*** below is a simplified depiction of the module `Comman
 - ```emptySlotList```, with pairs of ```integers``` of starting and ending slots for different days in a week, is sorted by the starting slot. This is to prepare for the checking and finding overlapping lesson intervals later.
 - If there are clashes:
 
- <details><summary>&nbsp;&nbsp; (a) Get all clash intervals of the day </summary><p>
+ <details><summary> &nbsp;&nbsp; (a) Get all clash intervals of the day </summary><p>
 
 &nbsp;&nbsp; <img src="images/printTimetable_3_1.png" width="280" />
 
