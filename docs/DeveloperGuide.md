@@ -189,7 +189,7 @@ The ***Activity Diagram*** below is a simplified depiction of the module `Comman
 
 ##### 4.4.3 Write day and time headers for timetable
 <img src="images/printTimetable_3.png" width="280" />
-<details><summary>Activity of 4.4.3</summary><p style='text-align: justify;' markdown="1">
+<details><summary> Activity of 4.4.3 </summary><p style='text-align: justify;' markdown="1">
 
 - ```emptySlotList```, with pairs of ```integers``` of starting and ending slots for different days in a week, is sorted by the starting slot. This is to prepare for the checking and finding overlapping lesson intervals later.
 - If there are clashes:
@@ -203,6 +203,7 @@ The ***Activity Diagram*** below is a simplified depiction of the module `Comman
 &nbsp;&nbsp;&nbsp;&nbsp; III. Popularize ```clashSlotList``` for each day - to store the merged overlapping intervals in step I. <br>
 &nbsp;&nbsp;&nbsp;&nbsp; IV. Remove un-clashed lesson slots. In the above example, ```[1100,1200]``` is not a clashed interval, which is removed in this step. <br>
 &nbsp;&nbsp;&nbsp;&nbsp; V. Return ```clashSlotList```, now an ```ArrayList``` of clashed intervals. <br>
+
 </p> </details> 
 
 
